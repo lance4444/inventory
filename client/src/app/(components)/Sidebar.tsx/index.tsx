@@ -11,6 +11,7 @@ import {
   SlidersHorizontal,
   User,
 } from "lucide-react";
+import Image from "next/image";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -77,7 +78,13 @@ const Sidebar = () => {
         className={`flex gap-3 justify-between md:justify-normal items-center pt-8 
           ${isSidebarCollapsed ? "px-5" : "px-8"}`}
       >
-        <div>logo</div>
+        <Image
+          src="https://inventorymanagement-lance.s3.us-east-1.amazonaws.com/logo.jpg"
+          alt="logo"
+          width={27}
+          height={27}
+          className="rounded w-8"
+        />
         <h1
           className={`${
             isSidebarCollapsed ? "hidden" : "block"

@@ -1,4 +1,16 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname:
+          "https://inventorymanagement-lance.s3.us-east-1.amazonaws.com",
+        port: "",
+        pathname: "/**",
+      },
+    ],
+  },
+};
 
 export default nextConfig;
